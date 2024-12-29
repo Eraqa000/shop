@@ -1,1 +1,0 @@
-# shopy.github.io

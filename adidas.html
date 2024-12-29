@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Adidas</title>
+    <link rel="website icon" type="png" href="icon.png">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <meta name="description" content="Shopyfy">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+            <a href="{{url_for('admin')}}" class="navbar-brand">SHOPYFY</a>
+            <div class="navbar-wrap">
+                <ul class="navbar-menu">
+                    <li>
+                        <a href="#">О нас</a>
+                        <ul class="submenu">
+                            <li><a href="#" id="teamLink">Наша команда</a></li> 
+                            <li><a href="#">История</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Портфолио</a>
+                        <ul class="submenu">
+                            <li><a href="#">Проекты</a></li>
+                            <li><a href="#">Отчеты</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="callback">продукты</a>
+                        <ul class="submenu">
+                            <li><a href="{{url_for('puma')}}">Puma</a></li>
+                            <li><a href="{{url_for('nike')}}" >Nike</a></li>
+                            <li><a href="{{url_for('adidas')}}" >Adidas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{url_for('korzina')}}">
+                            <img src="\cart-shopping-solid.svg" alt="Корзина" class="cart-icon">
+                            <span id="cart-count" class="cart-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</nav>
+
+<div class="sidebar">
+    <br>
+    <div class="cards-row">
+        <!-- Карточки продуктов -->
+        <div class="card" data-id="1_2" data-name="adidas-1" data-price="2200">
+            <h4 align="center">adidas-1</h4>
+            <img src="/photo/adidas_1.webp" alt="adidas-1" class="card-image">
+            <p><h4>2200 ₽</h4></p>
+            <div class="card-buttons">
+                <button class="buy-button">Купить</button>
+                <button class="cart-button">Положить в корзину</button>
+            </div>
+        </div>
+
+        <div class="card" data-id="2_2" data-name="adidas-2" data-price="2500">
+            <h4 align="center">adidas-2</h4>
+            <img src="/photo/adidas_2.png" alt="adidas-2" class="card-image">
+            <p><h4>2500 ₽</h4></p>
+            <div class="card-buttons">
+                <button class="buy-button">Купить</button>
+                <button class="cart-button">Положить в корзину</button>
+            </div>
+        </div>
+
+        <div class="card" data-id="3_2" data-name="adidas-3" data-price="2800">
+            <h4 align="center">adidas-3</h4>
+            <img src="/photo/adidas_3.png" alt="adidas-3" class="card-image">
+            <p><h4>2800 ₽</h4></p>
+            <div class="card-buttons">
+                <button class="buy-button">Купить</button>
+                <button class="cart-button">Положить в корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="other-products-button" class="load-more-button">Показать другие продукты</button>
+
+    <!-- Контейнер для дополнительных товаров -->
+    <div id="other-products-container" class="other-cards-row hidden"></div>
+
+    <br>
+</div>
+
+<div class="footer"> </div>
+
+<script src="{{url_for('static', filename='adidas.js')}}"></script>
+</body>
+</html>

@@ -1,1 +1,1 @@
-# shop
+# shopy.github.io
